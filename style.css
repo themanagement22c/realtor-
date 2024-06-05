@@ -1,0 +1,224 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --background-color:#ccc;
+    --background-color2:#fffdd0;
+
+}
+body{
+    width:100vw;
+    max-width:1100px;
+    height:100vh;
+    padding:1rem;
+    background-color: var(--background-color);
+    margin:auto;
+    
+}
+
+.img{
+    width:100%;
+    height:auto;
+}
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem;
+    background-color:var(--background-color2);
+    border-radius:1rem;
+    width:100%;
+    margin:1rem auto;
+}
+#smallMenu{
+    display:none;
+    transform:translateX(2000px)
+}
+#smallMenu.show{
+    display:block;
+    position:absolute;
+    transform:translateX(2px);
+    transition:transform ease-in-out 2000ms;
+    top:1rem;
+    z-index:100;
+    background-color: #444;
+    height:90vh;
+    width:30vw;
+    padding:1rem;
+    line-height:2;
+    font-size:1.5remm;
+}
+#smallMenu ul{
+    list-style:none;
+}
+#smallMenu ul a{
+    color:#ccc;
+    text-decoration:none;
+}
+#smallMenu ul a:hover{
+    color:#a04949;
+    border-bottom:2ps solid #a04949;
+
+}
+
+.logo {
+    font-size:1.7rem;
+    text-decoration:none;
+    margin-right:2rem;
+    color:#111;
+}
+
+#smallMenu .closeBtn{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    background-color:#666;
+    color:#fff;
+    height:3rem;
+    width:3rem;
+    border-radius:50%;
+    font-size:1.55rem;
+    padding:0.3rem;
+    border:none;
+}
+#smallMenu .closeBtn:hover{
+    background:#a04949
+}
+
+.navBtn{
+    width:30px;
+    padding:2px;
+    border:none;
+    background-color:transparent;
+}
+.bar{
+    width:100%;
+    height:2px;
+    background-color:#111;
+    margin-bottom:2px;
+}
+
+
+#hero{
+    width:100%;
+    height:80vh;
+    background:url('./houses/pexels-pixabay-259588.jpg');
+    background-size:cover;
+    background-position:center center;
+    margin:1rem 0;
+    position:relative
+}
+
+#hero #mainHeading{
+    color:red;
+    font-size:3rem;
+    position:absolute;
+    top:50%;
+    bottom:50%;
+    right:50%;
+    left:50%;
+}
+
+#products{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(1, 1fr);
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    padding:0.5rem;
+    gap:1rem;
+}
+#products .blucks {
+    width:90%;
+    padding:1rem;
+    border-radius:1rem;
+    position:relative;
+    box-shadow:1px 1px 2px #eee, -1px -1px 2px #ddd;
+    margin:auto;
+}
+
+#products .blucks .top{
+    position:relative;
+}
+
+#products .blucks img{
+    width:100%;
+    object-fit: contain;
+}
+
+#products .blucks .likeBtn{
+    border-radius:50%;
+    border:1px solid red;
+    padding:1px;
+    height:40px;
+    width:40px;
+    position:absolute;
+    bottom:1rem;
+    right:1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+#products .blucks .likeBtn.like{
+    background-color:red;
+}
+#products .blucks .mailBtn{
+    position:absolute;
+    color:#444;
+    text-decoration:none;
+    padding:0.3rem 1.5rem;
+    border:1px solid #444;
+    border-radius:1rem;
+    bottom:1rem;
+    right:1rem;
+}
+@media (max-width: 390px){
+    #smallMenu.show{
+       
+       
+        background-color: #444;
+        height:90vh;
+        width:90vw;
+       
+    }
+    
+#hero #mainHeading{
+    color:red;
+    font-size:2rem;
+    position:relative;
+    top:50%;
+    bottom:50%;
+    right:5%;
+    left:5%;
+}
+
+#products .blucks {
+    width:90%;
+    padding:1rem;
+    border-radius:1rem;
+ 
+    position:relative;
+    box-shadow:1px 1px 2px #eee, -1px -1px 2px #ddd;
+    margin:auto;
+}
+.bttm{
+    margin:0.5rem;
+}
+#products .blucks .mailBtn{
+    position:static;
+    color:#444;
+    text-decoration:none;
+    padding:0.3rem 1.5rem;
+    border:1px solid #444;
+    border-radius:1rem;
+    margin-top:0.5rem;
+    display:block;
+}
+}
